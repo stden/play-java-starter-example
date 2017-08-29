@@ -13,7 +13,6 @@ import static play.test.Helpers.contentAsString;
 
 /**
  * Unit testing does not require Play application start up.
- *
  * https://www.playframework.com/documentation/latest/JavaTest
  */
 public class UnitTest {
@@ -29,7 +28,7 @@ public class UnitTest {
     public void testCount() {
         final CountController controller = new CountController(() -> 49);
         Result result = controller.count();
-        assertThat(contentAsString(result)).isEqualTo("49");
+        assertThat(contentAsString(result)).isEqualTo("Count: 49");
     }
 
     // Unit test a controller with async return

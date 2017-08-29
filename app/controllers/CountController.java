@@ -20,7 +20,7 @@ public class CountController extends Controller {
 
     @Inject
     public CountController(Counter counter) {
-       this.counter = counter;
+        this.counter = counter;
     }
 
     /**
@@ -30,7 +30,7 @@ public class CountController extends Controller {
      * requests by an entry in the <code>routes</code> config file.
      */
     public Result count() {
-        return ok(Integer.toString(counter.nextCount()));
+        return ok("Count: " + Integer.toString(counter.nextCount()));
     }
 
 }
